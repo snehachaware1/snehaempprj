@@ -1,0 +1,58 @@
+﻿@model SnehaProject.Models.Employee
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Login</h2>
+@using (Html.BeginForm())
+{
+<div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-3">
+        <span> User Name </span>
+    </div>
+    <div class="col-lg-3">
+        <input type="text" class="form-control" id="txtUserName" name="UserName" />
+    </div>
+    <div class="col-lg-3">
+        <br />
+    </div>
+</div>
+<div class="row" style="margin-top:10px;">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-3">
+        Password
+    </div>
+    <div class="col-lg-3">
+        <input type="password" class="form-control" id="txtPassword" name="Password" />
+    </div>
+    <div class="col-lg-3">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-3">
+        <br />
+        @Html.ActionLink("New Employee? Register", "Index", "Registration");
+        <input type="submit" value="Sign In" class="btn btn-primary" />
+    </div>
+</div>
+}
+<script type="text/javascript">
+    function ShowMessage(Message) {
+        alert(Message);
+    };
+
+</script>
+@if (ViewBag.JavaScriptFunction != null)
+{
+    <script type="text/javascript">
+        @Html.Raw(ViewBag.JavaScriptFunction)
+    </script>
+}

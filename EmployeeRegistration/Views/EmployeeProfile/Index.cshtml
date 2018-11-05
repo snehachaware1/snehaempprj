@@ -1,0 +1,24 @@
+﻿@model SnehaProject.Models.Employee
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Employee Details</h2>
+<div class="row">
+    <div class="col-lg-3">
+        User Name :
+    </div>
+    <div class="col-lg-3">
+        <span >   @Html.DisplayFor(emp => emp.UserName) </span>
+    </div>
+    <div class="col-lg-3">
+        Password:
+    </div>
+    <div class="col-lg-3">
+        <span> @Html.DisplayFor(emp => emp.Password)</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        @Html.ActionLink("Sign Out", "Index", "Login")
+    </div>
+    
+</div>
